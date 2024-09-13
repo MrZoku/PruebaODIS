@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OrganizadorTarea</string>
+
+    <string-array name="categorias_array">
+        <item>Personal</item>
+        <item>Trabajo</item>
+        <item>Estudios</item>
+    </string-array>
+
+</resources>

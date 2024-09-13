@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- CheckBox -->
+    <CheckBox
+        android:id="@+id/checkBoxTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tarea completada" />
+
+    <!-- RadioButton -->
+    <RadioGroup
+        android:id="@+id/radioGroupPrioridad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/checkBoxTarea"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonAlta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alta" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Media" />
+
+        <RadioButton
+            android:id="@+id/radioButtonBaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Baja" />
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/progressBarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroupPrioridad"
+        android:indeterminate="true" />
+
+    <RatingBar
+        android:id="@+id/ratingBarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBarTarea"
+        android:numStars="5"
+        android:stepSize="1" />
+
+    <ImageView
+        android:id="@+id/imageViewTarea"
+        android:layout_width="99dp"
+        android:layout_height="92dp"
+        android:layout_below="@id/ratingBarTarea"
+        android:src="@drawable/engranaje" />
+
+    <Spinner
+        android:id="@+id/spinnerCategorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewTarea"
+        android:entries="@array/categorias_array" />
+
+    <EditText
+        android:id="@+id/editTextNuevaTarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nueva tarea"
+        android:layout_below="@id/spinnerCategorias"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonAgregarTarea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar Tarea"
+        android:layout_below="@id/editTextNuevaTarea"
+        android:layout_marginTop="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTareas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerCategorias"
+        android:layout_marginTop="125dp"
+        android:scrollbars="vertical" />
+
+</RelativeLayout>
